@@ -1,0 +1,49 @@
+
+h1 {
+    text-align: center;
+
+}
+h5 {
+    text-align: center;
+}
+.fails {
+    text-align: right;
+}
+.deaths {
+    text-align: right;
+}
+.wins {
+    text-align: right;
+
+}
+.startButton {
+    text-align: center;
+}
+.blanks {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 5px;
+
+}
+.buttons {
+    text-align: center;
+    padding: 50px 10px;
+}
+.start {
+    width: 50%;
+    height: 50%;   
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+.lose {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: show;
+
+}
+.waves-effect waves-light btn-large {
+    margin: 0 auto;
+}
