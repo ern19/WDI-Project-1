@@ -1,3 +1,5 @@
+console.log("brp")
+
 $(document).ready(function(){
     console.log("brp")
     const words = ["element", "selector", "function", "variable", "loop", "jquery"]
