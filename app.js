@@ -36,14 +36,20 @@ $(document).ready(function(){
     //     $(".blanks").html(letterContent);
     // });
     
-    $("#startButton").click(function() {
+//     $("#startButton").click(function() {
         
-        $("#hint").html(defs[0])
-    $(".letter").click(function() { 
-        console.log(textContent(".letter")) 
+//         $("#hint").html(defs[0])
+//     $(".letter").click(function() { 
+//         console.log(textContent(".letter")) 
     
-    });
-    });
+//     });
+//     });
+// });
+$("#startButton").click(function() {
+    $("#hint").html(wordBank[0].definition)
+    $("#blanks").html(wordBank[0].word)
 });
+});
+console.log(wordBank[1].definition);
 
-console.log(wordBank[3]);
+

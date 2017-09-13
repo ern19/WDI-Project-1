@@ -55,6 +55,9 @@ const wordBank = [
     }
 ]
 
-
+$("#startButton").click(function() {
+    $("#hint").html(wordBank[0].definition)
+    $("#blanks").html(wordBank[0].word)
+});
 
 
