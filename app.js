@@ -56,8 +56,8 @@ wordToArray: function wordArray(word) {
 
 $(document).ready(function(){
     $("#startButton").click(function() {
-        $("#hint").html(wordBank[4].definition)
-        $("#blanks").html(wordBank[4].blanks)
+        $("#hint").html(wordBank[0].definition)
+        $("#blanks").html(wordBank[0].blanks)
     });
     
     $('.letter').click(function(){
@@ -65,8 +65,18 @@ $(document).ready(function(){
         console.log(letterVal)
         var wordArray = wordBank[0].word.split("");
         console.log(wordArray);
-        var blankArray = wordBank[0].blanks.split("");
-        console.log(blankArray); 
+        // var blankArray = wordBank[0].blanks.split("");
+        // console.log(blankArray); 
+        for (var i = 0; i < wordArray.length; i++) {         
+            if (letterVal === wordArray[i]) {
+                    console.log("Correct!")
+                }
+                else {
+                    console.log("Incorrect!")
+                }
+
+            
+        }
     
     
     });

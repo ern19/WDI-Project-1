@@ -69,4 +69,18 @@ $("#startButton").click(function() {
 
 $('.letter').click(function(){
     var letterVal = ($(this).attr('value'));
+    console.log(letterVal)
+    var wordArray = wordBank[0].word.split("");
+    console.log(wordArray);
+    var blankArray = wordBank[0].blanks.split("");
+    console.log(blankArray); 
+    for (var i = 0; i < wordArray.length; i++) {
+        for (var j = 0; j < blankArray.length; j++) {
+            if (letterVal === wordArray[i]) {
+                console.log("Correct!")
+            }
+
+        }
+    }
+
 });
