@@ -67,3 +67,6 @@ $("#startButton").click(function() {
 });
 
 
+$('.letter').click(function(){
+    var letterVal = ($(this).attr('value'));
+});
