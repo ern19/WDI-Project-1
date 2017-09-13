@@ -78,6 +78,10 @@ $('.letter').click(function(){
         for (var j = 0; j < blankArray.length; j++) {
             if (letterVal === wordArray[i]) {
                 console.log("Correct!")
+                letterVal.appendTo(blankArray)
+            }
+            else {
+                console.log("Incorrect!")
             }
 
         }

@@ -1,7 +1,7 @@
 const wordBank = [
     {
         word: "element",
-        blanks: "_______",
+        blanks: [],
         definition: "An individual component of an HTML document or web page.",
         wordToArray: function wordArray(word) {
             word.split("")
@@ -10,7 +10,7 @@ const wordBank = [
 
     {
         word: "selector",
-        blanks: "________",
+        blanks: [],
         definition: " Are used to select the element(s) you want to style.",
         wordToArray: function wordArray(word) {
             word.split("")
@@ -19,7 +19,7 @@ const wordBank = [
 
     {
         word: "function",
-        blanks: "________",
+        blanks: [],
         definition: "A reusuable block of code that does something in a script",
         wordToArray: function wordArray(word) {
             word.split("")
@@ -28,7 +28,7 @@ const wordBank = [
     
     {
         word: "variable",
-        blanks: "________",
+        blanks: [],
         definition: "Something that you assign a value to.",
         wordToArray: function wordArray(word) {
             word.split("")
@@ -37,7 +37,7 @@ const wordBank = [
 
     {
         word: "loop",
-        blanks: "____",
+        blanks: [],
         definition: "A kind of function that carries out a block of code a specified # of times.",
         wordToArray: function wordArray(word) {
             word.split("")
@@ -46,7 +46,7 @@ const wordBank = [
     
     {
         word: "jQuery",
-        blanks: "______",
+        blanks: [],
         definition: "A library of functions that allows developers to manipulate the DOM more efficiently",
 wordToArray: function wordArray(word) {
             word.split("")
@@ -57,7 +57,7 @@ wordToArray: function wordArray(word) {
 $(document).ready(function(){
     $("#startButton").click(function() {
         $("#hint").html(wordBank[0].definition)
-        $("#blanks").html(wordBank[0].blanks)
+        // $("#blanks").html(wordBank[0].blanks)
     });
     
     $('.letter').click(function(){
@@ -65,11 +65,12 @@ $(document).ready(function(){
         console.log(letterVal)
         var wordArray = wordBank[0].word.split("");
         console.log(wordArray);
-        // var blankArray = wordBank[0].blanks.split("");
-        // console.log(blankArray); 
+        $("#blanks").html(wordBank[0].blanks)
         for (var i = 0; i < wordArray.length; i++) {         
             if (letterVal === wordArray[i]) {
                     console.log("Correct!")
+                    wordBank[0].blanks.push(letterVal);
+                    
                 }
                 else {
                     console.log("Incorrect!")
