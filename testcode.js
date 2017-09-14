@@ -43,17 +43,10 @@ const wordBank = [//all word/def pairs for gameplay
 ]
 
 $(document).ready(function(){//start code
-    function randWord() {
-        Math.floor(Math.random() * wordBank.length)
-    }
-    $("#startButton").click(function() {
-        $("#hint").html(wordBank[1].definition)
-        $("#blanks").html(wordBank[1].blanks)
-        var gamePlay = true
-        if (gamePlay === true) {
-            $("#startButton").click(function() {
-                randWord(); //On click, the game will load a random array index number
-        }
+    let randWord = Math.floor(Math.random() * wordBank.length)
+    $("#startButton").click(function() {     
+        $("#hint").html(wordBank[randWord].definition)
+        $("#blanks").html(wordBank[randWord].blanks)
     });
     
     $('.letter').click(function(){//comparison code
@@ -94,7 +87,7 @@ $(document).ready(function(){//start code
             winCount.html(+1)
             
         }
-        if (!wordBank[1].word.includes(letterVal)) { //failed attempts
+        if (!wordInPlay.includes(letterVal)) { //failed attempts
             var failCount = document.getElementById('failCount');
             var number = failCount.innerHTML;
             number++;
