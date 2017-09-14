@@ -28,26 +28,28 @@ h5 {
 }
 .buttons {
     text-align: center;
-    padding: 50px 10px;
+    padding: 20px 5px;
 }
 .start {
     position: relative;
-    width: 50%;
-    height: 50%;   
-    margin-left: auto;
-    margin-right: auto;
     
+    width: 270px;
+    height: 204px;   
+    margin: 0 auto;
     display: show;
-    flex-direction: column;
+    
 }
 .lose {
     position: relative;
-    width: 50%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 270px;
+    height: 204px;
+    margin: 0 auto;
     display: none;
 
+}
+.jumbotron {
+    margin: 0 auto;
+    text-align: center;
 }
 .waves-effect waves-light btn-large {
     margin: 0 auto;
@@ -55,4 +57,30 @@ h5 {
 #hint {
     text-align: center;
     font-size: 24px;
+}
+
+.fails {
+    font-size: 18px;
+}
+
+.wins {
+    font-size: 18px;
+}
+
+.deaths {
+    font-size: 18px;
+}
+#failCount {
+    color: red;
+    font-size: 18px;
+}
+
+#winCount {
+    color: green;
+    font-size: 18px;
+}
+
+#bodyCount {
+    color: red;
+    font-size: 18px;
 }

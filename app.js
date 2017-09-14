@@ -98,6 +98,9 @@ $(document).ready(function(){//start code
             bodyCount.innerHTML = number;
         }
     });
+    $('.letter').click(function(){
+        console.log("a button was pressed")
+    });
 });
 
 
