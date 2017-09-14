@@ -78,7 +78,7 @@ $(document).ready(function(){//start code
         var winCount = $("#winCount")
         
         if (wordLength === blankLength) {
-            alert("You win!")
+            setTimeout(function() { $("#hint").html("You win!") }, 1500);
             winCount.html(+1)
             
         }
@@ -89,7 +89,7 @@ $(document).ready(function(){//start code
             failCount.innerHTML = number;
         }
         if (number === 6) {
-            alert("he ded")
+            setTimeout(function() { $("#hint").html("You lost :(") }, 1500);
             $(".start").hide()
             $(".lose").show()
             var bodyCount = document.getElementById('bodyCount');
