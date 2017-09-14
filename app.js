@@ -1,4 +1,4 @@
-const wordBank = [
+const wordBank = [//all word/def pairs for gameplay
     {
         word: "element",
         blanks: [],
@@ -42,13 +42,13 @@ const wordBank = [
     }
 ]
 
-$(document).ready(function(){
+$(document).ready(function(){//start code
     $("#startButton").click(function() {
         $("#hint").html(wordBank[0].definition)
         $("#blanks").html(wordBank[0].blanks)
     });
     
-    $('.letter').click(function(){
+    $('.letter').click(function(){//comparison code
         var letterVal = ($(this).attr('value'));
         console.log(letterVal)
         var wordArray = wordBank[0].word.split("");
@@ -65,9 +65,27 @@ $(document).ready(function(){
                     
                 }
             
+                
         }
-        if (wordBank[0].blanks.length === wordBank[0].word.length) {
+        
+        
+        
+    });
+    $('.letter').click(function(){ //"scoreboard" code
+        var letterVal = ($(this).attr('value'));
+        var wordLength = wordBank[0].word.length
+        var blankLength = wordBank[0].blanks.length
+        var winCount = $("#winCount")
+        
+        if (wordLength === blankLength) {
             alert("You win!")
+            winCount.html(+1)
+            
+        }
+        if (letterVal !== wordBank[0].word.split("")) {
+            var failCount = $('#failCount').eq(0).html();
+            var num = failCount.innerHTML
+            num++;
         }
     });
 });
