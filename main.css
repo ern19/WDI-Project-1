@@ -84,3 +84,6 @@ h5 {
     color: red;
     font-size: 18px;
 }
+.container {
+    padding: 2px;
+}

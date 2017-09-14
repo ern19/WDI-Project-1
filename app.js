@@ -83,8 +83,13 @@ $(document).ready(function(){//start code
         var blankLength = wordBank[randWord].blanks.length
         var winCount = $("#winCount")
         
+<<<<<<< HEAD
         if (wordLength === blankLength) {//wins
             alert("You win!")
+=======
+        if (wordLength === blankLength) {
+            setTimeout(function() { $("#hint").html("You win!") }, 1500);
+>>>>>>> c895edfcccbd94e11df3cc87312d2278165f3002
             winCount.html(+1)
             
         }
@@ -94,8 +99,13 @@ $(document).ready(function(){//start code
             number++;
             failCount.innerHTML = number;
         }
+<<<<<<< HEAD
         if (number === 6) { //body count
             alert("he ded")
+=======
+        if (number === 6) {
+            setTimeout(function() { $("#hint").html("You lost :(") }, 1500);
+>>>>>>> c895edfcccbd94e11df3cc87312d2278165f3002
             $(".start").hide()
             $(".lose").show()
             var bodyCount = document.getElementById('bodyCount');
