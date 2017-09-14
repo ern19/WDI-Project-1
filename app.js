@@ -100,6 +100,9 @@ $(document).ready(function(){//start code
     });
     $('.letter').click(function(){
         console.log("a button was pressed")
+        $('#a').css("color", "red");
+        
+ 
     });
 });
 
