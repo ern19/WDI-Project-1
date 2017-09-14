@@ -82,10 +82,11 @@ $(document).ready(function(){//start code
             winCount.html(+1)
             
         }
-        if (letterVal !== wordBank[0].word.split("")) {
-            var failCount = $('#failCount').eq(0).html();
-            var num = failCount.innerHTML
-            num++;
+        if (!wordBank[0].word.includes(letterVal)) {
+            var failCount = document.getElementById('failCount');
+            var number = failCount.innerHTML;
+            number++;
+            failCount.innerHTML = number;
         }
     });
 });
