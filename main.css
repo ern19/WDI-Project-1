@@ -87,3 +87,7 @@ h5 {
 .container {
     padding: 2px;
 }
+#next {
+    margin: 0 auto;
+    visibility: hidden;
+}
