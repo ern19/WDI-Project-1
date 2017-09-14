@@ -44,21 +44,21 @@ const wordBank = [//all word/def pairs for gameplay
 
 $(document).ready(function(){//start code
     $("#startButton").click(function() {
-        $("#hint").html(wordBank[0].definition)
-        $("#blanks").html(wordBank[0].blanks)
+        $("#hint").html(wordBank[1].definition)
+        $("#blanks").html(wordBank[1].blanks)
     });
     
     $('.letter').click(function(){//comparison code
         var letterVal = ($(this).attr('value'));
         console.log(letterVal)
-        var wordArray = wordBank[0].word.split("");
+        var wordArray = wordBank[1].word.split("");
         console.log(wordArray);
         
         for (var i = 0; i < wordArray.length; i++) {         
             if (letterVal === wordArray[i]) {
                     console.log("Correct!")
-                    wordBank[0].blanks.splice([i], 0, letterVal);
-                    $("#blanks").html(wordBank[0].blanks)
+                    wordBank[1].blanks.splice([i], 0, letterVal);
+                    $("#blanks").html(wordBank[1].blanks)
                 }
                 else {
                     console.log("Incorrect!")
@@ -73,8 +73,8 @@ $(document).ready(function(){//start code
     });
     $('.letter').click(function(){ //"scoreboard" code
         var letterVal = ($(this).attr('value'));
-        var wordLength = wordBank[0].word.length
-        var blankLength = wordBank[0].blanks.length
+        var wordLength = wordBank[1].word.length
+        var blankLength = wordBank[1].blanks.length
         var winCount = $("#winCount")
         
         if (wordLength === blankLength) {
@@ -82,11 +82,20 @@ $(document).ready(function(){//start code
             winCount.html(+1)
             
         }
-        if (!wordBank[0].word.includes(letterVal)) {
+        if (!wordBank[1].word.includes(letterVal)) {
             var failCount = document.getElementById('failCount');
             var number = failCount.innerHTML;
             number++;
             failCount.innerHTML = number;
+        }
+        if (number === 6) {
+            alert("he ded")
+            $(".start").hide()
+            $(".lose").show()
+            var bodyCount = document.getElementById('bodyCount');
+            var number = bodyCount.innerHTML;
+            number++;
+            bodyCount.innerHTML = number;
         }
     });
 });

@@ -31,13 +31,17 @@ h5 {
     padding: 50px 10px;
 }
 .start {
+    position: relative;
     width: 50%;
     height: 50%;   
     margin-left: auto;
     margin-right: auto;
+    
     display: show;
+    flex-direction: column;
 }
 .lose {
+    position: relative;
     width: 50%;
     height: 50%;
     margin-left: auto;
