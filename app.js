@@ -48,16 +48,32 @@ $(document).ready(function(){//start code
           
         $("#hint").html(wordBank[randWord].definition)
         $("#blanks").html(wordBank[randWord].blanks)
+
+        
     });
-    
+    $("#nextButton").click(function() {
+        console.log("nextButton pressed")
+        let randWord = Math.floor(Math.random() * wordBank.length)
+        var wordInPlay = wordBank[randWord].word
+        var blanksInPlay = wordBank[randWord].blanks
+        $("#hint").html(wordBank[randWord].definition)
+        $("#blanks").html(wordBank[randWord].blanks)
+        blanksInPlay = []
+    });
+    $('.letter').click(function(){
+        $(this).prop("disabled", true)
+    });
     $('.letter').click(function(){//comparison code
+        
         var letterVal = ($(this).attr('value'));
         console.log(letterVal)
         var wordInPlay = wordBank[randWord].word
         var blanksInPlay = wordBank[randWord].blanks
         var wordArray = wordBank[randWord].word.split("");
         console.log(wordArray);
-        
+        $('.letter').click(function(){
+            $(this).prop("disabled", true)
+        });
         for (var i = 0; i < wordArray.length; i++) {         
             if (letterVal === wordArray[i]) {
                     console.log("Correct!")
@@ -86,6 +102,7 @@ $(document).ready(function(){//start code
         if (wordLength === blankLength) {
             setTimeout(function() { $("#hint").html("You win!") }, 1500);
             winCount.html(+1)
+            $("#nextButton").show()
             
         }
         if (!wordInPlay.includes(letterVal)) { //failed attempts
@@ -102,6 +119,7 @@ $(document).ready(function(){//start code
             var number = bodyCount.innerHTML;
             number++;
             bodyCount.innerHTML = number;
+            $("#nextButton").show()
         }
     });
     $('.letter').click(function(){

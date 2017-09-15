@@ -57,6 +57,7 @@ h5 {
 #hint {
     text-align: center;
     font-size: 24px;
+    margin: 9px;
 }
 
 .fails {
@@ -86,4 +87,8 @@ h5 {
 }
 .container {
     padding: 2px;
+}
+#nextButton {
+    margin: 0 auto;
+    display: none;
 }
