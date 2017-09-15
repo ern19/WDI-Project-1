@@ -19,6 +19,7 @@ h5 {
 #startButton {
     text-align: center;
     margin: 0 auto;
+    /* color: #f7bf9a; */
 }
 #blanks {
     text-align: center;
@@ -58,18 +59,22 @@ h5 {
     text-align: center;
     font-size: 24px;
     margin: 9px;
+    /* color: #f7bf9a; */
 }
 
 .fails {
     font-size: 18px;
+    /* color: #f7bf9a; */
 }
 
 .wins {
     font-size: 18px;
+    /* color: #f7bf9a; */
 }
 
 .deaths {
     font-size: 18px;
+    /* color: #f7bf9a; */
 }
 #failCount {
     color: red;
@@ -92,3 +97,8 @@ h5 {
     margin: 0 auto;
     display: none;
 }
+/* body {
+    background-image: url("http://moziru.com/images/wild-west-clipart-western-background-16.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+} */
