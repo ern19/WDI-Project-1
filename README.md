@@ -5,9 +5,10 @@ Project description: A simple Hangman game for web devs! Guess letters and try n
 Wireframe- https://i.imgur.com/cWPg98g.jpg
 Trello board- https://trello.com/b/XjuN5nxX/hangman-project-wdi12
 
-Link to game: 
+Link to game: http://car-park-attendant-crocodile-66605.bitballoon.com/
 
-Technologies: 
+Technologies: jQuery, Materialize
 
-Things to add in the next version:
+Things to add in the next version: Extended gameplay w/o refreshing, cumulative scores, 
+adaptive blanks that change for each word
 
