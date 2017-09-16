@@ -93,10 +93,9 @@ $(document).ready(function(){
             resets()
         }
         if (!wordInPlay.includes(letterVal)) {
-            
-            var number = failCount.html
-            number++
-            failCount.innerHTML = number
+            var number = failCount.innerHTML;
+            number++;
+            failCount.innerHTML = number;
         }
         if (number === 6) {
             $(".letter").prop("disabled", false)
