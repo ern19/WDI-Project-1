@@ -39,7 +39,8 @@ const wordBank = [//all word/def pairs for gameplay
         blanks: [],
         definition: "A library of functions that allows developers to manipulate the DOM more efficiently. (6 letters)",
 
-    }
+    },
+
 ]
 
 $(document).ready(function(){
@@ -104,7 +105,7 @@ $(document).ready(function(){
             $(".lose").show()
             num = bodyCount.innerHTML
             num++
-            bodyCount.innerHTML = number
+            bodyCount.innerHTML = num
             resets()
         }
     });
