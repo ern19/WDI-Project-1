@@ -5,7 +5,7 @@ Project description: A simple Hangman game for web devs! Guess letters and try n
 Wireframe- https://i.imgur.com/cWPg98g.jpg
 Trello board- https://trello.com/b/XjuN5nxX/hangman-project-wdi12
 
-Link to game: http://59bbd3e90752d001ddd6552c.car-park-attendant-crocodile-66605.bitballoon.com/
+Link to game: http://warden-alonso-34758.bitballoon.com/
 
 Technologies: jQuery, Materialize
 
